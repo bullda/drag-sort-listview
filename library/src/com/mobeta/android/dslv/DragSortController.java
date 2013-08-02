@@ -412,15 +412,15 @@ public class DragSortController extends SimpleFloatViewManager implements
 						&& Math.abs(x2 - x1) > mTouchSlop && mRemoveEnabled) {
 					mIsRemoving = true;
 					startDrag(mFlingHitPos, deltaX, deltaY);
+				} else if (Math.abs(y2 - y1) > mTouchSlop / 4) {
+					mCanDrag = false;
 				}
 			} else if (mFlingHitPos != MISS) {
 				if (Math.abs(x2 - x1) > mTouchSlop && mRemoveEnabled) {
 					mIsRemoving = true;
 					startDrag(mFlingHitPos, deltaX, deltaY);
-				} else if (Math.abs(y2 - y1) > mTouchSlop) {
-					mCanDrag = false; // if started to scroll the list then
-										// don't allow sorting nor
-										// fling-removing
+				} else if (Math.abs(y2 - y1) > mTouchSlop / 4) {
+					mCanDrag = false;
 				}
 			}
 		}
