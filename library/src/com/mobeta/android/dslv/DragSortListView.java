@@ -2333,13 +2333,13 @@ public class DragSortListView extends ListView {
 		boolean updated = updatePositions();
 
 		if (updated) {
-			Log.d("doDragFloatView", "need update");
+			// Log.d("doDragFloatView", "need update");
 			adjustAllItems();
 			int scroll = adjustScroll(movePos, moveItem, oldFirstExpPos,
 					oldSecondExpPos);
 			// Log.d("mobeta", "  adjust scroll="+scroll);
 
-			Log.d("msh", "select ==== doDragFloatView()");
+			// Log.d("msh", "select ==== doDragFloatView()");
 			setSelectionFromTop(movePos, moveItem.getTop() + scroll
 					- getPaddingTop());
 			layoutChildren();

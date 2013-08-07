@@ -256,8 +256,7 @@ public class DragSortController extends SimpleFloatViewManager implements
 
 		mDetector.onTouchEvent(ev);
 		if (mRemoveEnabled && mDragging && mRemoveMode == FLING_REMOVE) {
-			// cancel the detector
-			// mFlingRemoveDetector.onTouchEvent(ev);
+			mFlingRemoveDetector.onTouchEvent(ev);
 		}
 
 		int action = ev.getAction() & MotionEvent.ACTION_MASK;
@@ -412,7 +411,8 @@ public class DragSortController extends SimpleFloatViewManager implements
 						&& Math.abs(x2 - x1) > mTouchSlop && mRemoveEnabled) {
 					mIsRemoving = true;
 					startDrag(mFlingHitPos, deltaX, deltaY);
-				} else if (Math.abs(y2 - y1) > mTouchSlop / 4) {
+				} else if (mDragInitMode == ON_LONG_PRESS
+						&& Math.abs(y2 - y1) > mTouchSlop / 4) {
 					mCanDrag = false;
 				}
 			} else if (mFlingHitPos != MISS) {
@@ -420,7 +420,9 @@ public class DragSortController extends SimpleFloatViewManager implements
 					mIsRemoving = true;
 					startDrag(mFlingHitPos, deltaX, deltaY);
 				} else if (Math.abs(y2 - y1) > mTouchSlop / 4) {
-					mCanDrag = false;
+					mCanDrag = false;// if started to scroll the list then
+										// don't allow sorting nor
+										// fling-removing
 				}
 			}
 		}
