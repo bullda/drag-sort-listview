@@ -1,4 +1,4 @@
-package com.mobeta.android.dslv;
+package com.ilegendsoft.mercury.external.dslv;
 
 import android.graphics.Point;
 import android.util.Log;

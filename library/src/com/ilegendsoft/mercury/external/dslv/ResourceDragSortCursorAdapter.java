@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.mobeta.android.dslv;
+package com.ilegendsoft.mercury.external.dslv;
 
 import android.content.Context;
 import android.database.Cursor;

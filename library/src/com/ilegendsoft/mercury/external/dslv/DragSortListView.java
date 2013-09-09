@@ -19,12 +19,14 @@
  * limitations under the License.
  */
 
-package com.mobeta.android.dslv;
+package com.ilegendsoft.mercury.external.dslv;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import com.ilegendsoft.mercury.external.dslv.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
