@@ -1,7 +1,6 @@
 package com.ilegendsoft.mercury.external.dslv;
 
 import android.graphics.Point;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
@@ -394,6 +393,10 @@ public class DragSortController extends SimpleFloatViewManager implements
 	@Override
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
+
+		if (e1 == null || e2 == null) {
+			return false;
+		}
 
 		final int x1 = (int) e1.getX();
 		final int y1 = (int) e1.getY();

@@ -20,3 +20,21 @@ local.properties
 # Eclipse project files
 .classpath
 .project
+demo/res/layout/checkable_main.xml
+demo/res/layout/cursor_main.xml
+demo/res/layout/dslv_fragment_main.xml
+demo/res/layout/hetero_main.xml
+demo/res/layout/sections_main.xml
+demo/res/layout/warp_main.xml
+demo/src/com/mobeta/android/demodslv/ArbItemSizeDSLV.java
+demo/src/com/mobeta/android/demodslv/CursorDSLV.java
+demo/src/com/mobeta/android/demodslv/DSLVFragment.java
+demo/src/com/mobeta/android/demodslv/DSLVFragmentBGHandle.java
+demo/src/com/mobeta/android/demodslv/DragInitModeDialog.java
+demo/src/com/mobeta/android/demodslv/EnablesDialog.java
+demo/src/com/mobeta/android/demodslv/MultipleChoiceListView.java
+demo/src/com/mobeta/android/demodslv/RemoveModeDialog.java
+demo/src/com/mobeta/android/demodslv/Sections.java
+demo/src/com/mobeta/android/demodslv/SingleChoiceListView.java
+demo/src/com/mobeta/android/demodslv/TestBedDSLV.java
+demo/src/com/mobeta/android/demodslv/WarpDSLV.java
